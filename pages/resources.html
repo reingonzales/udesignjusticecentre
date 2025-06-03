@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects – U DESIGN JUSTICE CENTRE</title>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Barlow Condensed', sans-serif;
+      background-color: #e9e9e1;
+      color: #111;
+      display: flex;
+    }
+
+    .left-column {
+      width: 80px;
+      background: white;
+      color: black;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1em 0;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1000;
+    }
+
+    .vertical-text {
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      font-weight: bold;
+      font-size: 1em;
+      letter-spacing: 2px;
+      font-family: 'Barlow Condensed', sans-serif;
+    }
+
+    .social-icons {
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      margin-bottom: 1em;
+    }
+
+    .social-icons img {
+      width: 20px;
+      height: 20px;
+      filter: grayscale(100%);
+    }
+
+    main {
+      margin-left: 80px;
+      width: calc(100% - 80px);
+    }
+
+    .sticky-nav {
+      position: sticky;
+      top: 0;
+      background: #e9e9e1;
+      padding: 1em 2em;
+      z-index: 900;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2em;
+      font-size: 0.9em;
+      text-transform: uppercase;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #333;
+      border-bottom: 1px solid transparent;
+      transition: border-bottom 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      border-bottom: 1px solid #333;
+    }
+
+    .content {
+      padding: 4em 3em;
+    }
+
+    .headline {
+      font-family: 'Playfair Display', serif;
+      font-size: 4em;
+      line-height: 1.1;
+      max-width: 900px;
+      margin-bottom: 1em;
+    }
+
+    .intro {
+      font-size: 1.1em;
+      max-width: 600px;
+      margin-bottom: 3em;
+      color: #444;
+    }
+
+    .project {
+      margin-bottom: 6em;
+    }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      font-size: 0.9em;
+      color: #666;
+      margin-bottom: 1em;
+    }
+
+    .project h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2em;
+      margin-bottom: 0.5em;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 2em;
+    }
+
+    .project img {
+      width: 100%;
+      border-radius: 6px;
+      object-fit: cover;
+    }
+
+    .project-content {
+      column-count: 2;
+      column-gap: 2em;
+      font-size: 1em;
+      line-height: 1.8;
+      color: #111;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 4em 0;
+      font-size: 0.9em;
+      color: #777;
+    }
+
+    @media (max-width: 900px) {
+      .project-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .project-content {
+        column-count: 1;
+      }
+
+      .headline {
+        font-size: 2.5em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="left-column">
+    <div class="vertical-text">U DESIGN JUSTICE CENTRE</div>
+    <div class="social-icons">
+      <a href="https://instagram.com" target="_blank">
+        <img src="../images/instagram-svgrepo-com.svg" alt="Instagram" />
+      </a>
+      <a href="https://linkedin.com" target="_blank">
+        <img src="../images/linkedin-svgrepo-com.svg" alt="LinkedIn" />
+      </a>
+    </div>
+  </div>
+
+  <main>
+    <div class="sticky-nav">
+      <div class="nav-links">
+        <a href="#">Articles</a>
+        <a href="#">Design Justice</a>
+        <a href="#">Topics That Matter</a>
+      </div>
+    </div>
+
+    <div class="content">
+      <h1 class="headline">Exploring Projects Rooted in Community and Equity</h1>
+      <p class="intro">
+        These projects are stories. They speak of resistance, reclamation, creativity, and collective care. Designed with—not for—communities, each one challenges norms and reimagines space.
+      </p>
+
+      <section class="project">
+        <div class="project-header">
+          <span>By UDJ Studio</span>
+          <span>April 12, 2025</span>
+        </div>
+        <h2>Community Pavilion</h2>
+        <div class="project-grid">
+          <img src="../images/placeholder1.jpg" alt="Community Pavilion" />
+          <div class="project-content">
+            <p>
+              Built in partnership with local residents and youth, this pavilion becomes more than a structure—it becomes a gathering space rooted in oral history and seasonal ritual.
+              Circular forms, reclaimed materials, and a rhythm aligned with the sun’s path ground the architecture in ancestral memory.
+            </p>
+            <p>
+              The process was led through story circles and co-design sprints, emphasizing listening over leading. It demonstrates how design can serve as a practice of care, reciprocity, and emergence.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="project">
+        <div class="project-header">
+          <span>By CISA x DJC Collab</span>
+          <span>March 4, 2025</span>
+        </div>
+        <h2>Restorative Library</h2>
+        <div class="project-grid">
+          <img src="../images/placeholder1.jpg" alt="Restorative Library" />
+          <div class="project-content">
+            <p>
+              This reimagined public library shifts away from silence and restriction toward vibrancy and belonging. Created through multi-lingual engagement, it centers access, care, and storytelling.
+            </p>
+            <p>
+              Intergenerational planning teams helped map desires: children wanted play; elders wanted pause; teens wanted safe zones. These inputs shaped the space into layered zones of interaction and rest.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="project">
+        <div class="project-header">
+          <span>By UDJ Mobile Team</span>
+          <span>January 20, 2025</span>
+        </div>
+        <h2>Mobile Studio</h2>
+        <div class="project-grid">
+          <img src="../images/placeholder1.jpg" alt="Mobile Studio" />
+          <div class="project-content">
+            <p>
+              Part classroom, part amplifier—the mobile studio is a traveling platform for neighborhoods to tell their own stories. It stops in underrepresented communities and offers free hands-on design justice education.
+            </p>
+            <p>
+              From screenprinting zines to digital storytelling, the bus facilitates imagination. It’s a rolling archive, an invitation to reclaim space, and a model for public infrastructure shaped by the public.
+            </p>
+          </div>
+        </div>
+      </section>
+
+            <div class="footer">
+        © 2025 U DESIGN JUSTICE CENTRE — Building with equity, every step of the way.
+      </div>
+
+      <div style="text-align: center; margin-top: 4em;">
+        <a href="../index.html" style="
+          text-decoration: none;
+          border: 1px solid black;
+          padding: 0.75em 2em;
+          color: black;
+          font-weight: 600;
+          transition: all 0.3s ease;
+        " onmouseover="this.style.background='black'; this.style.color='white';"
+           onmouseout="this.style.background='transparent'; this.style.color='black';">
+          ← Back to Home
+        </a>
+      </div>
+
+
+    
+  </main>
+
+</body>
+</html>

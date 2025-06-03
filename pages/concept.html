@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Concept – U DESIGN JUSTICE CENTRE</title>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #0e0e0e;
+      font-family: 'Barlow Condensed', sans-serif;
+      color: white;
+      display: flex;
+    }
+
+    .left-column {
+      width: 80px;
+      background: white;
+      color: black;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1em 0;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 999;
+    }
+
+    .vertical-text {
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      font-weight: bold;
+      font-size: 2.5em;
+      letter-spacing: 2px;
+      font-family: 'Barlow Condensed', sans-serif;
+    }
+
+    .social-icons {
+      display: flex;
+      flex-direction: column;
+      gap: 2em;
+      margin-bottom: 1em;
+    }
+
+    .social-icons img {
+      width: 30px;
+      height: 30px;
+      filter: grayscale(100%);
+    }
+
+    main {
+      margin-left: 80px;
+      width: calc(100% - 80px);
+    }
+
+    section {
+      padding: 4em 2em;
+    }
+
+    .hero {
+      background: url('../images/placeholder-hero.jpg') center/cover no-repeat;
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 4em 2em;
+    }
+
+    .hero h1 {
+      font-size: 4em;
+      margin-bottom: 0.5em;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      max-width: 500px;
+    }
+
+    .hero .button {
+      margin-top: 2em;
+      border: 1px solid white;
+      padding: 0.5em 1.5em;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .hero .button:hover {
+      background-color: white;
+      color: black;
+    }
+
+    .features,
+    .metrics,
+    .about,
+    .advantages {
+      background: transparent;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5em;
+    }
+
+    .feature-box {
+      text-align: center;
+    }
+
+    .feature-box h3 {
+      font-size: 1.5em;
+      margin-bottom: 0.5em;
+    }
+
+    .metrics {
+      display: flex;
+      justify-content: space-around;
+      text-align: center;
+      flex-wrap: wrap;
+    }
+
+    .metric {
+      font-size: 1.2em;
+      margin: 1em;
+    }
+
+    .metric span {
+      font-size: 2em;
+      font-weight: bold;
+      display: block;
+      color: #ccc;
+    }
+
+    .about {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2em;
+    }
+
+    .about-text, .about-image {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .about-image img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .advantages {
+      text-align: center;
+    }
+
+    .advantage-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2em;
+      margin-top: 2em;
+    }
+
+    .advantage-card img {
+      width: 100%;
+      border-radius: 6px;
+      margin-bottom: 1em;
+    }
+
+    .back-button {
+      text-align: center;
+      margin: 4em 0;
+    }
+
+    .back-button a {
+      border: 1px solid white;
+      padding: 0.75em 2em;
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+    }
+
+    .back-button a:hover {
+      background-color: white;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="left-column">
+    <div class="vertical-text">U DESIGN JUSTICE CENTRE</div>
+    <div class="social-icons">
+      <a href="https://instagram.com" target="_blank">
+        <img src="../images/instagram-svgrepo-com.svg" alt="Instagram" />
+      </a>
+      <a href="https://linkedin.com" target="_blank">
+        <img src="../images/linkedin-svgrepo-com.svg" alt="LinkedIn" />
+      </a>
+    </div>
+  </div>
+
+  <main>
+    <section class="hero">
+      <h1>DESIGN JUSTICE<br>& EQUITY</h1>
+      <p>Reimagining spaces through collective design, community-led creativity, and architectural inclusivity.</p>
+      <a class="button" href="#about">Learn More</a>
+    </section>
+
+    <section class="features">
+      <div class="feature-box">
+        <h3>INDEPENDENCE</h3>
+        <p>Championing community-led initiatives and grassroots design thinking.</p>
+      </div>
+      <div class="feature-box">
+        <h3>UNIQUENESS</h3>
+        <p>Elevating marginalized voices through bold, context-driven design.</p>
+      </div>
+      <div class="feature-box">
+        <h3>QUALITY</h3>
+        <p>Commitment to deep listening, detail, and dignified spatial experiences.</p>
+      </div>
+      <div class="feature-box">
+        <h3>SUSTAINABILITY</h3>
+        <p>Designing for resilience, reciprocity, and long-term cultural impact.</p>
+      </div>
+    </section>
+
+    <section class="quote-section" style="padding: 6em 2em; text-align: center; background-color: #111;">
+  <blockquote style="font-size: 1.8em; line-height: 1.6; font-style: italic; max-width: 800px; margin: 0 auto; color: #ccc;">
+    “Design justice rethinks design processes, centers people who are normally marginalized by design, and uses collaborative, creative practices to address the deepest challenges our communities face.”
+  </blockquote>
+  <p style="margin-top: 1em; font-size: 1em; color: #888;">— Sasha Costanza-Chock, Design Justice, MIT Press, 2020</p>
+</section>
+
+
+    <section class="about" id="about">
+      <div class="about-text">
+        <h2>WHERE ARCHITECTURE MEETS EQUITY</h2>
+        <p>We believe design is a powerful tool for justice. Our goal is to challenge traditional planning by embracing participatory processes and co-learning with communities. Architecture becomes a dialogue — not a directive.</p>
+        <p>Through interdisciplinary collaboration and reflective methods, we co-create spaces that prioritize dignity, accessibility, and belonging. We aim to restore agency where it’s been lost and amplify stories that too often go unheard.</p>
+      </div>
+      <div class="about-image">
+        <img src="../images/placeholder2.jpg" alt="Community Design">
+      </div>
+    </section>
+
+    <section class="advantages">
+      <h2>OUR ADVANTAGES</h2>
+      <div class="advantage-grid">
+        <div class="advantage-card">
+          <img src="../images/placeholder1.jpg" alt="Community Process">
+          <h4>COMMUNITY-CENTERED</h4>
+          <p>Centering lived experience to shape equitable outcomes and meaningful impact.</p>
+        </div>
+        <div class="advantage-card">
+          <img src="../images/placeholder2.jpg" alt="Design Dialogue">
+          <h4>CO-DESIGN METHODS</h4>
+          <p>Hands-on workshops, storytelling, and iterative design rooted in mutual respect.</p>
+        </div>
+        <div class="advantage-card">
+          <img src="../images/placeholder2.jpg" alt="Materiality and Detail">
+          <h4>CRITICAL MATERIALITY</h4>
+          <p>We value the poetics of material, light, and space that reflect culture and identity.</p>
+        </div>
+        <div class="advantage-card">
+          <img src="../images/placeholder2.jpg" alt="Sustainable Design">
+          <h4>FUTURE-READY</h4>
+          <p>Designing with long-term social, ecological, and ethical resilience in mind.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="back-button">
+      <a href="../index.html">← Back to Home</a>
+    </div>
+  </main>
+
+  <!-- Subtle gradient background scroll effect -->
+  <script>
+    window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY;
+      const baseR = 14, baseG = 14, baseB = 14;
+      const r = Math.min(baseR + scrollY * 0.01, 30);
+      const g = Math.min(baseG + scrollY * 0.015, 30);
+      const b = Math.min(baseB + scrollY * 0.02, 30);
+      const topColor = `rgb(${r}, ${g}, ${b})`;
+      const bottomColor = `rgb(${r + 10}, ${g + 10}, ${b + 10})`;
+      document.body.style.background = `linear-gradient(to bottom, ${topColor}, ${bottomColor})`;
+    });
+  </script>
+
+</body>
+</html>
+

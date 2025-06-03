@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Learn More – U DESIGN JUSTICE CENTRE</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Barlow Condensed', sans-serif;
+      background-color: #0e0e0e;
+      color: white;
+      display: flex;
+    }
+
+    .left-column {
+      width: 80px;
+      background-color: white;
+      color: black;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1em 0;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+    }
+
+    .vertical-text {
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      font-weight: bold;
+      font-size: 2.5em;
+      letter-spacing: 0.1em;
+    }
+
+    .social-icons {
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+    }
+
+    .social-icons img {
+      width: 20px;
+      height: 20px;
+    }
+
+    main {
+      margin-left: 80px;
+      width: calc(100% - 80px);
+      padding: 2em;
+    }
+
+    .section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2em;
+      margin-bottom: 4em;
+      border-bottom: 1px solid #444;
+      padding-bottom: 2em;
+    }
+
+    .section.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .text {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .image {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .image img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .label {
+      font-size: 1rem;
+      color: #aaa;
+      margin-bottom: 0.5em;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 0.5em;
+    }
+
+    p {
+      color: #ccc;
+      margin-bottom: 1em;
+    }
+
+    .button-container {
+      text-align: center;
+      margin-top: 4em;
+    }
+
+    .button {
+      padding: 0.75em 1.5em;
+      border: 1px solid white;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .button:hover {
+      background-color: white;
+      color: black;
+    }
+
+    @media (max-width: 768px) {
+      .section {
+        flex-direction: column;
+      }
+
+      .section.reverse {
+        flex-direction: column;
+      }
+
+      .left-column {
+        position: static;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1em;
+      }
+
+      main {
+        margin-left: 0;
+        width: 100%;
+      }
+
+      .vertical-text {
+        writing-mode: horizontal-tb;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="left-column">
+    <h1 class="vertical-text">U DESIGN JUSTICE CENTRE</h1>
+    <div class="social-icons">
+      <a href="https://instagram.com" target="_blank">
+        <img src="../images/instagram-svgrepo-com.svg" alt="Instagram" />
+      </a>
+      <a href="https://linkedin.com" target="_blank">
+        <img src="../images/linkedin-svgrepo-com.svg" alt="LinkedIn" />
+      </a>
+    </div>
+  </div>
+
+  <main>
+    <section class="section">
+      <div class="text">
+        <div class="label">Workshop #1</div>
+        <h2>A strong brand is a tool to connect people with your brand all around the world.</h2>
+        <p>The UDesign Justice Centre aims to transform our approaches and professional practice by establishing a community of practice and a collective environment, where diverse stakeholders can collaborate. This initiative will collaboratively shape the structure and purpose of the UDesign Justice Centre by involving a wide range of local and national participants, including community members, organizations, researchers, academics, and industry experts.</p>
+        <p>​Join us for the launch of the Design Justice Centre initiative at the University of Calgary's School of Architecture, Planning and Landscape (SAPL). This groundbreaking project will bring together community members, students, activists, designers, and planners to co-create a hub that centers racial, spatial, and social justice in the built environment.</p>
+      </div>
+      <div class="image">
+        <img src="../images/placeholder6.jpg" alt="Branding Team">
+      </div>
+    </section>
+
+    <section class="section reverse">
+      <div class="text">
+        <div class="label">Workshop #2</div>
+        <h2>We specialize in creating amazing web experiences that people will love, based on your great ideas.</h2>
+        <p>At our agency, we're masters at crafting unforgettable web experiences that captivate and delight users. Bringing your ideas to life, our team of detail designers, developers, and UX experts work tirelessly to create seamless and intuitive interfaces that leave a lasting impression. By understanding your vision and goals, we transform your ideas into digital realities that exceed expectations.</p>
+        <p>From sleek design to seamless functionality, we ensure every element is meticulously crafted to evoke emotions and engage your audience. Trust us to guide your vision into an extraordinary online journey that will leave users falling in love with your brand.</p>
+      </div>
+      <div class="image">
+        <img src="../images/placeholder6.jpg" alt="Web Design Sketch">
+      </div>
+    </section>
+
+    <div class="button-container">
+      <a class="button" href="../index.html">← Back to Home</a>
+    </div>
+  </main>
+
+</body>
+</html>
