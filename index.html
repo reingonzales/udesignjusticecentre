@@ -1,12 +1,40 @@
 
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>U DESIGN JUSTICE CENTRE</title>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600&family=Playfair+Display:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet">
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>U DESIGN JUSTICE CENTRE</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600&amp;family=Playfair+Display:wght@400;700&amp;family=Great+Vibes&amp;display=swap" rel="stylesheet"/>
+<style>
+.hero-content {
+  position: relative;
+  z-index: 2;
+  margin-top: 12em;
+  text-align: center;
+  max-width: 80%;
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    margin-top: 5em;
+    max-width: 90%;
+  }
+
+  .hero p, .hero a {
+    font-size: 1.2em;
+  }
+
+  .right-nav a {
+    font-size: 1.2em;
+  }
+
+  .highlight-grid img {
+    width: 80%;
+  }
+}
+
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
   font-family: 'Barlow Condensed', sans-serif;
@@ -133,7 +161,7 @@
 
     .hero p {
       font-size: 1.5em;
-      margin-top: 0.5em;
+      margin-top: 8em;
       font-weight: 600;
       letter-spacing: 1px;
       position: relative;
@@ -346,168 +374,199 @@
       }
       main { margin-left: 0; width: 100%; }
     }
-  </style>
+  
+/* Responsive image handling */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive grid for highlight section */
+.highlight-grid img {
+  width: 100%;
+  max-width: 300px;
+}
+
+/* Hero padding for smaller screens */
+@media (max-width: 768px) {
+  .hero {
+    height: auto;
+    padding: 6em 1em 4em;
+  }
+
+  .hero-content p, .hero-content a {
+    font-size: 1em;
+    padding: 0 1em;
+  }
+
+  .right-nav {
+    right: 10px;
+    top: 10px;
+  }
+
+  .right-nav a {
+    font-size: 1.2em;
+  }
+
+  .vertical-text {
+    font-size: 1.2em;
+  }
+
+  .highlight-section {
+    padding-top: 10em;
+  }
+
+  .about-section,
+  .contact-info-block {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-form {
+    padding: 1em;
+  }
+}
+</style>
 </head>
 <body>
-  <div class="left-column">
-    <h1 class="vertical-text">U DESIGN JUSTICE CENTRE</h1>
-    <div class="social-icons">
-      <a href="https://www.instagram.com/udesignjusticecentre/" target="_blank">
-        <img src="images/instagram-svgrepo-com.svg" alt="Instagram" />
-      </a>
-      <a href="https://www.linkedin.com/company/udesignjusticecentre/" target="_blank">
-        <img src="images/linkedin-svgrepo-com.svg" alt="LinkedIn" />
-      </a>
-    </div>
-  </div>
+<div class="left-column">
+<h1 class="vertical-text">U DESIGN JUSTICE CENTRE</h1>
+<div class="social-icons">
+<a href="https://www.instagram.com/udesignjusticecentre/" target="_blank">
+<img alt="Instagram" src="images/instagram-svgrepo-com.svg"/>
+</a>
+<a href="https://www.linkedin.com/company/udesignjusticecentre/" target="_blank">
+<img alt="LinkedIn" src="images/linkedin-svgrepo-com.svg"/>
+</a>
+</div>
+</div>
+<div class="right-nav">
+<ul>
+<li><a href="#home">HOME</a></li>
+<li><a href="pages/concept.html">CONCEPT</a></li>
+<li><a href="pages/resources.html">RESOURCES</a></li>
+<li><a href="pages/team.html">TEAM</a></li>
+<li><a href="pages/projects.html"> OUR PROJECTS</a></li>
+<li><a href="#contacts">CONTACT</a></li>
+</ul>
+</div>
+<main>
+<section class="hero" id="hero">
+<div class="hero-content">
+<p>The UDesign Justice Centre aims to transform our approaches and professional practice by establishing a community of practice and a collective environment, where diverse stakeholders can collaborate. This initiative will collaboratively shape the structure and purpose of the UDesign Justice Centre by involving a wide range of local and national participants, including community members, organizations, researchers, academics, and industry experts.</p>
+<a href="pages/learnmore.html">UPCOMING WORKSHOP DETAILS</a>
+</div>
 
-  <div class="right-nav">
-    <ul>
-      <li><a href="#home">HOME</a></li>
-      <li><a href="pages/concept.html">CONCEPT</a></li>
-      <li><a href="pages/resources.html">RESOURCES</a></li>
-      <li><a href="pages/team.html">TEAM</a></li>
-      <li><a href="pages/projects.html"> OUR PROJECTS</a></li>
-      <li><a href="#contacts">CONTACT</a></li>
-    </ul>
-  </div>
 
-  <main>
-    <section class="hero" id="hero">
-      <p>The UDesign Justice Centre aims to transform our approaches and professional practice by establishing a community of practice and a collective environment, where diverse stakeholders can collaborate. This initiative will collaboratively shape the structure and purpose of the UDesign Justice Centre by involving a wide range of local and national participants, including community members, organizations, researchers, academics, and industry experts. </p>
-      </p>
-        <a href="pages/learnmore.html"> UPCOMING WORKSHOP DETAILS</a>
-      </div>
-    </section>
-    
-    <section class="highlight-section">
-      <h2>OUR WORK</h2>
-      <div class="highlight-grid">
-        <img src="images/placeholder2.jpg" alt="Art 1" />
-        <img src="images/placeholder2.jpg" alt="Art 2" />
-        
-        
-      </div>
-    </section>
-
-    <section class="about-section">
-      <div class="text">
-        <h3>About Our Practice</h3>
-        <p>
+</section>
+<section class="highlight-section">
+<h2>OUR WORK</h2>
+<div class="highlight-grid">
+<img alt="Art 1" src="images/placeholder2.jpg"/>
+<img alt="Art 2" src="images/placeholder2.jpg"/>
+</div>
+</section>
+<section class="about-section">
+<div class="text">
+<h3>About Our Practice</h3>
+<p>
           The U Design Justice Centre aims to transform our approaches and professional practice by establishing a community of practice and a collective environment, where diverse stakeholders can collaborate centering equity, inclusion, and justice in design practices and teaching. This initiative will collaboratively shape the structure and purpose of the DJL+C by involving a wide range of local and national participants, including community members, organizations, researchers, academics, and industry experts.
         </p>
-        <a href="pages/learnmore.html">WORKSHOP DETAILS</a>
-      </div>
-      <div class="image">
-        <img src="images/placeholder3.jpg" alt="Team or Mission" />
-      </div>
-    </section>
-
-    <section class="about-section" style="background:#000; color:white; padding:6em 2em;">
-  <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 3em; max-width: 1200px; margin: 0 auto;">
-
-    <!-- Photo Thumbnail -->
-    <div style="flex: 0 0 200px; min-width: 200px; height: 200px; border-radius: 50%; overflow: hidden;">
-      <img src="images/cecile(mainpage).jpg" alt="Director" style="width: 100%; height: 100%; object-fit: cover;" />
-    </div>
-
-   <!-- Text Content -->
+<a href="pages/learnmore.html">WORKSHOP DETAILS</a>
+</div>
+<div class="image">
+<img alt="Team or Mission" src="images/placeholder3.jpg"/>
+</div>
+</section>
+<section class="about-section" style="background:#000; color:white; padding:6em 2em;">
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 3em; max-width: 1200px; margin: 0 auto;">
+<!-- Photo Thumbnail -->
+<div style="flex: 0 0 200px; min-width: 200px; height: 200px; border-radius: 50%; overflow: hidden;">
+<img alt="Director" src="images/cecile(mainpage).jpg" style="width: 100%; height: 100%; object-fit: cover;"/>
+</div>
+<!-- Text Content -->
 <div style="flex: 1;">
-  <h1 style="font-size: 6vw; font-weight: 800; font-family: 'Playfair Display', serif; margin-bottom: 0.5em;">Head Organizer</h1>
-  <p style="font-size: 1.1em; line-height: 1.8; font-family: 'Barlow Condensed', sans-serif;">
-    Cecile Kotyk<br><br>
+<h1 style="font-size: 6vw; font-weight: 800; font-family: 'Playfair Display', serif; margin-bottom: 0.5em;">Head Organizer</h1>
+<p style="font-size: 1.1em; line-height: 1.8; font-family: 'Barlow Condensed', sans-serif;">
+    Cecile Kotyk<br/><br/>
     Leading the UDesign Justice Centre’s mission with an eye toward equity and community-rooted design, our director brings extensive experience in public practice, research, and creative problem-solving. This role is dedicated to shaping the culture of accountability, imagination, and justice in every initiative.
   </p>
 </div>
-
-</section>
-
-
-   <section class="team-section" style="background:#111; color:white; padding:6em 2em;">
-  <div style="max-width: 1200px; margin: 0 auto;">
-    <h2 style="font-size: 3em; font-family: 'Playfair Display', serif; margin-bottom: 2em;">OUR TEAM</h2>
-
-    <!-- SAPL Team Row (text left, image right) -->
-    <div style="display: flex; flex-wrap: wrap; align-items: stretch; gap: 2em; margin-bottom: 4em;">
-      <!-- Text block -->
-      <div style="flex: 1; min-width: 280px; background: #fff; color: #000; padding: 1.5em;">
-        <p style="font-weight: bold; font-size: 0.95em;">
+</div></section>
+<section class="team-section" style="background:#111; color:white; padding:6em 2em;">
+<div style="max-width: 1200px; margin: 0 auto;">
+<h2 style="font-size: 3em; font-family: 'Playfair Display', serif; margin-bottom: 2em;">OUR TEAM</h2>
+<!-- SAPL Team Row (text left, image right) -->
+<div style="display: flex; flex-wrap: wrap; align-items: stretch; gap: 2em; margin-bottom: 4em;">
+<!-- Text block -->
+<div style="flex: 1; min-width: 280px; background: #fff; color: #000; padding: 1.5em;">
+<p style="font-weight: bold; font-size: 0.95em;">
           The SAPL team leads research, outreach, and program design grounded in community practice and justice-driven pedagogy.
         </p>
-        <p style="font-size: 0.8em;">UDesign Sub Team</p>
-        <p style="font-size: 0.8em; margin-top: 0.5em;"></p>
-        <p style="font-size: 0.9em; text-align: right; margin-top: 1em;">-<br><span style="font-size: 0.7em;">UCALGARY</span></p>
-      </div>
-
-      <!-- Image block -->
-      <div style="flex: 1; min-width: 300px; background-image: url('images/placeholder4.jpg'); background-size: cover; background-position: center;"></div>
-    </div>
-
-    <!-- Advisory Team Row  -->
-    <div style="display: flex; flex-wrap: wrap; align-items: stretch; gap: 2em;">
-      <!-- Image block -->
-      <div style="flex: 1; min-width: 280px; background-image: url('images/placeholder5.jpg'); background-size: cover; background-position: center;"></div>
-
-      <!-- Text block -->
-      <div style="flex: 1; min-width: 280px; background: #fff; color: #000; padding: 1.5em;">
-        <p style="font-weight: bold; font-size: 0.95em;">
+<p style="font-size: 0.8em;">UDesign Sub Team</p>
+<p style="font-size: 0.8em; margin-top: 0.5em;"></p>
+<p style="font-size: 0.9em; text-align: right; margin-top: 1em;">-<br/><span style="font-size: 0.7em;">UCALGARY</span></p>
+</div>
+<!-- Image block -->
+<div style="flex: 1; min-width: 300px; background-image: url('images/placeholder4.jpg'); background-size: cover; background-position: center;"></div>
+</div>
+<!-- Advisory Team Row  -->
+<div style="display: flex; flex-wrap: wrap; align-items: stretch; gap: 2em;">
+<!-- Image block -->
+<div style="flex: 1; min-width: 280px; background-image: url('images/placeholder5.jpg'); background-size: cover; background-position: center;"></div>
+<!-- Text block -->
+<div style="flex: 1; min-width: 280px; background: #fff; color: #000; padding: 1.5em;">
+<p style="font-weight: bold; font-size: 0.95em;">
           Our advisory team offers their interdisciplinary experience and design insight to guide meaningful, community-led transformation.
         </p>
-        <p style="font-size: 0.8em;">UDesign Sub Team</p>
-        <p style="font-size: 0.8em; margin-top: 0.5em;"></p>
-        <p style="font-size: 0.9em; text-align: right; margin-top: 1em;">-<br><span style="font-size: 0.7em;">UCALGARY</span></p>
-      </div>
-    </div>
-
-    <!-- Learn More -->
-    <div style="text-align: right; margin-top: 3em;">
-      <a href="pages/team.html" style="text-decoration: none; font-weight: bold; color: #ccc; border-bottom: 2px solid #ccc; font-family: 'Barlow Condensed', sans-serif;">
-        LEARN MORE >
+<p style="font-size: 0.8em;">UDesign Sub Team</p>
+<p style="font-size: 0.8em; margin-top: 0.5em;"></p>
+<p style="font-size: 0.9em; text-align: right; margin-top: 1em;">-<br/><span style="font-size: 0.7em;">UCALGARY</span></p>
+</div>
+</div>
+<!-- Learn More -->
+<div style="text-align: right; margin-top: 3em;">
+<a href="pages/team.html" style="text-decoration: none; font-weight: bold; color: #ccc; border-bottom: 2px solid #ccc; font-family: 'Barlow Condensed', sans-serif;">
+        LEARN MORE &gt;
       </a>
-    </div>
-  </div>
+</div>
+</div>
 </section>
-
-
-    
-
-    <section class="contact-section" id="contacts">
-      <h1>Contact Us</h1>
-      <div class="contact-info-block">
-        <div class="contact-info-column">
-          <h3>general inquiries</h3>
-          <p>rein.gonzales@ucalgary.ca</p>
-        </div>
-        <div class="contact-info-column">
-          <h3>email</h3>
-          <p>mariececile.kotyk@ucalgary.ca</mariececile.kotyk></p>
-        </div>
-        <div class="contact-info-column">
-          <h3>address</h3>
-          <address>
-            SAPL, University of Calgary<br>
+<section class="contact-section" id="contacts">
+<h1>Contact Us</h1>
+<div class="contact-info-block">
+<div class="contact-info-column">
+<h3>general inquiries</h3>
+<p>rein.gonzales@ucalgary.ca</p>
+</div>
+<div class="contact-info-column">
+<h3>email</h3>
+<p>mariececile.kotyk@ucalgary.ca</p>
+</div>
+<div class="contact-info-column">
+<h3>address</h3>
+<address>
+            SAPL, University of Calgary<br/>
             2500 University Dr NW, Calgary, AB
           </address>
-        </div>
+</div>
+</div>
+<h1>Send a Message</h1>
+<div class="contact-form">
+<input placeholder="Full Name" required="" type="text"/>
+<input placeholder="Email Address" required="" type="email"/>
+<input placeholder="Phone Number" type="text"/>
+<input placeholder="Session Type" type="text"/>
+<input placeholder="Session Date" type="text"/>
+<textarea placeholder="Message" rows="4"></textarea>
+<button type="submit">SEND MY MESSAGE</button>
+</div>
+<div class="footer">
+        © 2025 U DESIGN JUSTICE CENTRE — All rights reserved.
       </div>
-
-      <h1>Send a Message</h1>
-      <div class="contact-form">
-        <input type="text" placeholder="Full Name" required />
-        <input type="email" placeholder="Email Address" required />
-        <input type="text" placeholder="Phone Number" />
-        <input type="text" placeholder="Session Type" />
-        <input type="text" placeholder="Session Date" />
-        <textarea rows="4" placeholder="Message"></textarea>
-        <button type="submit">SEND MY MESSAGE</button>
-      </div>
-      <div class="footer">
-        &copy; 2025 U DESIGN JUSTICE CENTRE — All rights reserved.
-      </div>
-    </section>
-  </main>
-
-  <script>
+</section>
+</main>
+<script>
     window.addEventListener('scroll', () => {
       const hero = document.getElementById('hero');
       const scrollY = window.scrollY;
