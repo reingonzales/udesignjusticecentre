@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projects – U DESIGN JUSTICE INITIATIVE</title>
+  <title>Topics – U DESIGN JUSTICE INITIATIVE</title>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
   <style>
     * {
@@ -41,7 +41,6 @@
       font-weight: bold;
       font-size: 1em;
       letter-spacing: 2px;
-      font-family: 'Barlow Condensed', sans-serif;
     }
 
     .social-icons {
@@ -87,6 +86,72 @@
 
     .nav-links a:hover {
       border-bottom: 1px solid #333;
+    }
+
+    .hero-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      height: 100vh;
+      background-color: #d9cbb1;
+      overflow: hidden;
+    }
+
+    .hero-left {
+      padding: 4em;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      background: 
+    linear-gradient(rgba(233, 233, 225, 0.85), rgba(233, 233, 225, 0.85)), 
+    url('../images/heroleftnews.png') no-repeat center center / cover;
+    }
+
+    .hero-left h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5em;
+      line-height: 1.2;
+      margin-bottom: 1em;
+    }
+
+    .hero-left p {
+      font-size: 1em;
+      max-width: 400px;
+      margin-bottom: 2em;
+    }
+
+    .hero-left .see-more {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5em;
+      font-size: 0.9em;
+      text-decoration: none;
+      color: #111;
+      font-weight: bold;
+    }
+
+    .hero-left .see-more::before {
+      content: '➜';
+      font-size: 1.2em;
+    }
+
+    .hero-right {
+      position: relative;
+      background: url('../images/newsheropic.jpg') no-repeat center center/cover;
+    }
+
+    .hero-overlay-text {
+      position: absolute;
+      bottom: 2em;
+      left: 2em;
+      background: rgba(255, 255, 255, 0.85);
+      padding: 1.5em;
+      max-width: 350px;
+      font-size: 0.9em;
+    }
+
+    .hero-overlay-text h4 {
+      margin-bottom: 0.5em;
     }
 
     .content {
@@ -179,6 +244,15 @@
       .headline {
         font-size: 2.5em;
       }
+
+      .hero-container {
+        grid-template-columns: 1fr;
+        height: auto;
+      }
+
+      .hero-right {
+        height: 300px;
+      }
     }
   </style>
 </head>
@@ -199,21 +273,35 @@
   <main>
     <div class="sticky-nav">
       <div class="nav-links">
-        <a href="#">Articles</a>
-        <a href="#">Design Justice</a>
-        <a href="#">Topics That Matter</a>
+        <a href="articles.html">Articles</a>
+        <a href="design-justice.html">Design Justice</a>
+        <a href="news.html">News</a>
       </div>
     </div>
 
+    <!-- HERO SECTION -->
+    <div class="hero-container">
+      <div class="hero-left">
+        <div style="font-size: 2em; margin-bottom: 1em;">📷</div>
+        <h1>BE A HERO IN YOUR CITY</h1>
+        <p>
+          “As soon as I left my home, I realized that I'm home.”<br/><br/>
+          Am I in touch with my deeper desires? What is the purpose? Question that I asked myself. Ready to find answers, I packed my belongings and left the womb, eyes cast to spread my wings and fly on my own.
+        </p>
+        <a class="see-more" href="#category-section">See More</a>
+      </div>
+      <div class="hero-right">
+        <div class="hero-overlay-text">
+          <h4>TETRIS DEVELOPMENT</h4>
+          <p>
+            Walking in sun-sliced corridors of high modernity, our forms extend like echoes. As we shift forward, our shadows stretch into another realm, asking us: what kind of hero do you want to be in your city?
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD GRID -->
     <div class="content">
-      <h1 class="headline">Exploring Projects Rooted in Community and Equity</h1>
-      <p class="intro">
-        These projects are stories. They speak of resistance, reclamation, creativity, and collective care. Designed with—not for—communities, each one challenges norms and reimagines space.
-      </p>
-
-     
-
-      <!-- Category Grid Section -->
       <section id="category-section" style="padding: 4em 3em;">
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2em;">
           <h2 style="font-family: 'Playfair Display', serif; font-size: 2em;">Articles</h2>
@@ -234,21 +322,7 @@
             <p style="font-size: 0.8em; color: #666;">Text: Jakob Gronberg <strong style="margin-left: 1em;">Duration:</strong> 15m</p>
           </div>
 
-          <div class="card" data-category="street-art" style="border: 1px solid #ccc; padding: 1.5em; background: #fff;">
-            <p style="font-size: 0.8em; color: #666; margin-bottom: 0.5em;">16. March 2022 <span style="float: right; border: 1px solid #000; padding: 0 0.4em; font-size: 0.75em;">STREET ART</span></p>
-            <img src="../images/placeholder1.jpg" alt="Street art festival" style="width: 100%; object-fit: cover; margin-bottom: 1em;" />
-            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.2em; margin-bottom: 0.5em;">Street art festival</h3>
-            <p style="font-size: 0.9em; color: #444; margin-bottom: 1em;">Lorem ipsum dolor sit amet...</p>
-            <p style="font-size: 0.8em; color: #666;">Text: Jakob Gronberg <strong style="margin-left: 1em;">Duration:</strong> 15m</p>
-          </div>
-
-          <div class="card" data-category="sculptures" style="border: 1px solid #ccc; padding: 1.5em; background: #fff;">
-            <p style="font-size: 0.8em; color: #666; margin-bottom: 0.5em;">16. March 2022 <span style="float: right; border: 1px solid #000; padding: 0 0.4em; font-size: 0.75em;">SCULPTURES</span></p>
-            <img src="../images/placeholder1.jpg" alt="The best art museums" style="width: 100%; object-fit: cover; margin-bottom: 1em;" />
-            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.2em; margin-bottom: 0.5em;">The best art museums</h3>
-            <p style="font-size: 0.9em; color: #444; margin-bottom: 1em;">Lorem ipsum dolor sit amet...</p>
-            <p style="font-size: 0.8em; color: #666;">Text: Jakob Gronberg <strong style="margin-left: 1em;">Duration:</strong> 15m</p>
-          </div>
+          <!-- other cards... -->
         </div>
       </section>
 
@@ -297,4 +371,5 @@
   </script>
 </body>
 </html>
+
 
