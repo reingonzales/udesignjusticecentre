@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projects – U DESIGN JUSTICE CENTRE</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects – U DESIGN JUSTICE INITIATIVE</title>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
   <style>
     * {
@@ -16,267 +16,188 @@
       font-family: 'Barlow Condensed', sans-serif;
       background-color: #e9e9e1;
       color: #111;
-      display: flex;
     }
 
-    .left-column {
-      width: 80px;
-      background: white;
-      color: black;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1em 0;
-      position: fixed;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      z-index: 1000;
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 3em 2em;
     }
 
-    .vertical-text {
-      writing-mode: vertical-rl;
-      transform: rotate(180deg);
-      font-weight: bold;
-      font-size: 1em;
-      letter-spacing: 2px;
-      font-family: 'Barlow Condensed', sans-serif;
-    }
-
-    .social-icons {
-      display: flex;
-      flex-direction: column;
-      gap: 1em;
-      margin-bottom: 1em;
-    }
-
-    .social-icons img {
-      width: 20px;
-      height: 20px;
-      filter: grayscale(100%);
-    }
-
-    main {
-      margin-left: 80px;
-      width: calc(100% - 80px);
-    }
-
-    .sticky-nav {
-      position: sticky;
-      top: 0;
-      background: #e9e9e1;
-      padding: 1em 2em;
-      z-index: 900;
-      border-bottom: 1px solid #ccc;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 2em;
-      font-size: 0.9em;
-      text-transform: uppercase;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      color: #333;
-      border-bottom: 1px solid transparent;
-      transition: border-bottom 0.2s ease;
-    }
-
-    .nav-links a:hover {
-      border-bottom: 1px solid #333;
-    }
-
-    .content {
-      padding: 4em 3em;
-    }
-
-    .headline {
+    header h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 4em;
-      line-height: 1.1;
-      max-width: 900px;
+      font-size: 6em;
+      letter-spacing: -2px;
+      text-transform: uppercase;
       margin-bottom: 1em;
     }
 
-    .intro {
-      font-size: 1.1em;
-      max-width: 600px;
-      margin-bottom: 3em;
-      color: #444;
+    .filters {
+      display: flex;
+      gap: 1em;
+      margin-bottom: 2em;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      padding: 0.5em 1.2em;
+      background: transparent;
+      border: 1px solid #333;
+      cursor: pointer;
+      font-size: 0.9em;
+      transition: background 0.2s;
+    }
+
+    .filter-btn:hover, .filter-btn.active {
+      background: #111;
+      color: #fff;
     }
 
     .project {
-      margin-bottom: 6em;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 2em;
+      margin-bottom: 4em;
+      border-top: 1px solid #ccc;
+      padding-top: 2em;
+      flex-wrap: wrap;
     }
 
-    .project-header {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
+    .project-text {
+      flex: 1 1 300px;
+    }
+
+    .project-text h2 {
+      font-size: 2em;
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 0.3em;
+    }
+
+    .project-text .meta {
       font-size: 0.9em;
-      color: #666;
+      color: #555;
       margin-bottom: 1em;
     }
 
-    .project h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.2em;
-      margin-bottom: 0.5em;
-    }
-
-    .project-grid {
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      gap: 2em;
-    }
-
-    .project img {
-      width: 100%;
-      border-radius: 6px;
-      object-fit: cover;
-    }
-
-    .project-content {
-      column-count: 2;
-      column-gap: 2em;
-      font-size: 1em;
-      line-height: 1.8;
-      color: #111;
-    }
-
-    .footer {
-      text-align: center;
-      padding: 4em 0;
-      font-size: 0.9em;
+    .project-text .tags {
+      font-size: 0.8em;
       color: #777;
     }
 
-    @media (max-width: 900px) {
-      .project-grid {
-        grid-template-columns: 1fr;
+    .project-media {
+      position: relative;
+      flex: 1 1 300px;
+      max-width: 500px;
+    }
+
+    .project-media img, .project-media iframe {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .project-media:hover img {
+      transform: scale(1.02);
+    }
+
+    .project-media .overlay-icon {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      font-size: 1.2em;
+      padding: 0.3em 0.6em;
+      border-radius: 50%;
+      font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 3.5em;
+        text-align: center;
       }
 
-      .project-content {
-        column-count: 1;
+      .filters {
+        justify-content: center;
       }
 
-      .headline {
-        font-size: 2.5em;
+      .project {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .project-text, .project-media {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
+
+      .project-text h2 {
+        font-size: 1.5em;
       }
     }
   </style>
 </head>
 <body>
+  <div class="container">
+    <header>
+      <h1>PROJECTS</h1>
+    </header>
 
-  <div class="left-column">
-    <div class="vertical-text">U DESIGN JUSTICE CENTRE</div>
-    <div class="social-icons">
-      <a href="https://instagram.com" target="_blank">
-        <img src="../images/instagram-svgrepo-com.svg" alt="Instagram" />
-      </a>
-      <a href="https://linkedin.com" target="_blank">
-        <img src="../images/linkedin-svgrepo-com.svg" alt="LinkedIn" />
-      </a>
+    <div class="filters">
+      <button class="filter-btn active" onclick="filterProjects('all')">All</button>
+      <button class="filter-btn" onclick="filterProjects('community')">Community</button>
+      <button class="filter-btn" onclick="filterProjects('mobile')">Mobile</button>
+      <button class="filter-btn" onclick="filterProjects('equity')">Equity</button>
+      <button class="filter-btn" onclick="filterProjects('video')">Videos</button>
+    </div>
+
+    <div class="project" data-tags="community equity">
+      <div class="project-text">
+        <h2>Community Pavilion</h2>
+        <div class="meta">2025</div>
+        <div class="tags">Community · Equity · Ritual</div>
+      </div>
+      <div class="project-media">
+        <img src="../images/placeholder1.jpg" alt="Community Pavilion">
+        <div class="overlay-icon">↗</div>
+      </div>
+    </div>
+
+    <div class="project" data-tags="mobile equity video">
+      <div class="project-text">
+        <h2>Mobile Studio Doc</h2>
+        <div class="meta">2024</div>
+        <div class="tags">Mobile · Equity · Video</div>
+      </div>
+      <div class="project-media">
+        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+        <div class="overlay-icon">↗</div>
+      </div>
     </div>
   </div>
 
-  <main>
-    <div class="sticky-nav">
-      <div class="nav-links">
-        <a href="#">Articles</a>
-        <a href="#">Design Justice</a>
-        <a href="#">Topics That Matter</a>
-      </div>
-    </div>
+  <script>
+    function filterProjects(tag) {
+      const projects = document.querySelectorAll('.project');
+      const buttons = document.querySelectorAll('.filter-btn');
 
-    <div class="content">
-      <h1 class="headline">Exploring Projects Rooted in Community and Equity</h1>
-      <p class="intro">
-        These projects are stories. They speak of resistance, reclamation, creativity, and collective care. Designed with—not for—communities, each one challenges norms and reimagines space.
-      </p>
+      buttons.forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
 
-      <section class="project">
-        <div class="project-header">
-          <span>By UDJ Studio</span>
-          <span>April 12, 2025</span>
-        </div>
-        <h2>Community Pavilion</h2>
-        <div class="project-grid">
-          <img src="../images/placeholder1.jpg" alt="Community Pavilion" />
-          <div class="project-content">
-            <p>
-              Built in partnership with local residents and youth, this pavilion becomes more than a structure—it becomes a gathering space rooted in oral history and seasonal ritual.
-              Circular forms, reclaimed materials, and a rhythm aligned with the sun’s path ground the architecture in ancestral memory.
-            </p>
-            <p>
-              The process was led through story circles and co-design sprints, emphasizing listening over leading. It demonstrates how design can serve as a practice of care, reciprocity, and emergence.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section class="project">
-        <div class="project-header">
-          <span>By CISA x DJC Collab</span>
-          <span>March 4, 2025</span>
-        </div>
-        <h2>Restorative Library</h2>
-        <div class="project-grid">
-          <img src="../images/placeholder1.jpg" alt="Restorative Library" />
-          <div class="project-content">
-            <p>
-              This reimagined public library shifts away from silence and restriction toward vibrancy and belonging. Created through multi-lingual engagement, it centers access, care, and storytelling.
-            </p>
-            <p>
-              Intergenerational planning teams helped map desires: children wanted play; elders wanted pause; teens wanted safe zones. These inputs shaped the space into layered zones of interaction and rest.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section class="project">
-        <div class="project-header">
-          <span>By UDJ Mobile Team</span>
-          <span>January 20, 2025</span>
-        </div>
-        <h2>Mobile Studio</h2>
-        <div class="project-grid">
-          <img src="../images/placeholder1.jpg" alt="Mobile Studio" />
-          <div class="project-content">
-            <p>
-              Part classroom, part amplifier—the mobile studio is a traveling platform for neighborhoods to tell their own stories. It stops in underrepresented communities and offers free hands-on design justice education.
-            </p>
-            <p>
-              From screenprinting zines to digital storytelling, the bus facilitates imagination. It’s a rolling archive, an invitation to reclaim space, and a model for public infrastructure shaped by the public.
-            </p>
-          </div>
-        </div>
-      </section>
-
-            <div class="footer">
-        © 2025 U DESIGN JUSTICE CENTRE — Building with equity, every step of the way.
-      </div>
-
-      <div style="text-align: center; margin-top: 4em;">
-        <a href="../index.html" style="
-          text-decoration: none;
-          border: 1px solid black;
-          padding: 0.75em 2em;
-          color: black;
-          font-weight: 600;
-          transition: all 0.3s ease;
-        " onmouseover="this.style.background='black'; this.style.color='white';"
-           onmouseout="this.style.background='transparent'; this.style.color='black';">
-          ← Back to Home
-        </a>
-      </div>
-
-
-    
-  </main>
-
+      projects.forEach(proj => {
+        const tags = proj.getAttribute('data-tags');
+        if (tag === 'all' || tags.includes(tag)) {
+          proj.style.display = 'flex';
+        } else {
+          proj.style.display = 'none';
+        }
+      });
+    }
+  </script>
 </body>
 </html>
